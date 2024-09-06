@@ -28,7 +28,7 @@ _**4. User info**_
 The project created on **_4th Sep. 2024_** by **_Jianan_** 
 
 ## Data source
-The data used in the project was provided by **[Motivate](https://motivateco.com/)**, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. Randomly selected data for the first six months of 2017 are provided for all three cities.
+The data used in the project was provided by **[Motivate](https://motivateco.com/)**, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. Randomly selected data for the first six months of 2017 are provided for Chicago, New York City and Washington.
 
 
 ## Software 

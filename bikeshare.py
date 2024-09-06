@@ -163,7 +163,10 @@ def user_stats(df):
     print('-'*40)
 
 def individual_data(df,i):
+    """Display the 5 items of individual detail data for bikeshare."""
+
     index_name=df.index.values
+    # Display the following 5 items of individual data.
     for n in index_name[5*i:5*(i+1)]:
         print('Index:{}'.format(n))
         print('Start Station:{}'.format(df.loc[n]['Start Station']))
