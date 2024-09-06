@@ -186,6 +186,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        # User choice for individual data view requirement. Only 5 items could be displayed.
         i=0
         while True:
              individual=input('\nWould you like to view individual data? Enter yes or no.\n')
