@@ -20,8 +20,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city=input('Would you like to see the data for Chicago, New York City or Washington?\n').lower()
     while city not in ['chicago','new york city','washington']:
-        print('please input one of city in Chicago, New York City or Washington!')
-        city=input('Would you like to see the data for Chicago, New York City or Washington?\n').lower()
+        city=input('please input one of city in Chicago, New York City or Washington!\nWould you like to see the data for Chicago, New York City or Washington?\n').lower()
         
     choice=input('would you like to filter the data by month, day, both, or not at all? Type "none" for no time filter.\n')
     while choice not in ['month','day','both','none']:
