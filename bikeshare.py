@@ -16,16 +16,17 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city=input('Would you like to see the data for Chicago, New York City or Washington?\n').lower()
     while city not in ['chicago','new york city','washington']:
-        print('please input one of city in Chicago, New York City or Washington!')
-        city=input('Would you like to see the data for Chicago, New York City or Washington?\n').lower()
+        city=input('please input one of city in Chicago, New York City or Washington!\nWould you like to see the data for Chicago, New York City or Washington?\n').lower()
         
     choice=input('would you like to filter the data by month, day, both, or not at all? Type "none" for no time filter.\n')
     while choice not in ['month','day','both','none']:
         print('please input the right command!')
         choice=input('would you like to filter the data by month, day, both, or not at all? Type "none" for no time filter.\n')
+
     if choice=='month':
         month=input('Which month? January, Febuary, March, April, May or June?\n').lower()
         day='all'
@@ -73,13 +74,11 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week']==day.title()]
- 
     return df
 
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
-
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
     df['start hour']=df['Start Time'].dt.hour
@@ -92,7 +91,8 @@ def time_stats(df):
     # TO DO: display the most common start hour 
     common_start_hour=df['start hour'].mode()[0]
     print('The most common start hour: {}.'.format(common_start_hour))
-   
+
+   #calculate programe take seconds.
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -159,6 +159,7 @@ def user_stats(df):
         print('The most common birth year: {}.'.format(common_birth_year))
     else:
         print('No Birth Year information.')
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
